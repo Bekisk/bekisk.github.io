@@ -37,10 +37,18 @@
                 <a href="#order-process" class="nav-item">ORDER</a>
             </nav>
 
-            <a href="https://wa.me/251942362738?text=Hi!%20I%20found%20your%20cake%20website%20and%20I%27d%20like%20to%20order%20a%20cake.%20Can%20you%20help%20me%20with%20the%20available%20options%3F"
-                target="_blank" rel="noopener noreferrer" class="btn-nav-order">
-                ORDER NOW
-            </a>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Light and Dark Mode"
+                    title="Switch Theme">
+                    <span class="theme-icon icon-sun">☀</span>
+                    <span class="theme-icon icon-moon">☾</span>
+                </button>
+
+                <a href="https://wa.me/251942362738?text=Hi!%20I%20found%20your%20cake%20website%20and%20I%27d%20like%20to%20order%20a%20cake.%20Can%20you%20help%20me%20with%20the%20available%20options%3F"
+                    target="_blank" rel="noopener noreferrer" class="btn-nav-order">
+                    ORDER NOW
+                </a>
+            </div>
 
             <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
                 <span></span>
@@ -103,233 +111,172 @@
         </div>
     </section>
 
-    <!-- 3. CAKE COLLECTION INTRO & CATEGORIES -->
-    <section class="collection-intro-section" id="cakes">
-        <div class="section-header">
+    <!-- 3. OUR CAKES — ONE COMPACT CATEGORY SECTION -->
+    <section class="compact-cakes-section" id="cakes">
+        <div class="compact-section-header">
             <span class="section-tag">CURATED SELECTION</span>
-            <h2 class="section-title">EXPLORE OUR CAKES</h2>
-            <p class="section-subtitle">Choose the cake that fits your moment.</p>
+            <h2 class="section-title">OUR CAKES</h2>
+            <p class="section-subtitle">Choose your favorite.</p>
         </div>
 
-        <div class="categories-grid">
-            <!-- Category 1 -->
-            <a href="#birthday-cakes" class="category-card">
-                <div class="category-bg category-bg-1"></div>
-                <div class="category-content">
-                    <span class="cat-number">01</span>
-                    <h3 class="cat-title">BIRTHDAY CAKES</h3>
-                    <p class="cat-desc">Classic buttercream cakes made for celebrations.</p>
-                    <span class="cat-link">EXPLORE CATEGORY →</span>
+        <div class="categories-container">
+            <!-- CATEGORY 01 — BIRTHDAY CAKES -->
+            <div class="compact-category-block" id="category-birthday">
+                <div class="category-block-header">
+                    <span class="category-num">CATEGORY 01</span>
+                    <h3 class="category-title">BIRTHDAY CAKES</h3>
+                    <div class="category-divider"></div>
                 </div>
-            </a>
 
-            <!-- Category 2 -->
-            <a href="#fudge-cakes" class="category-card">
-                <div class="category-bg category-bg-2"></div>
-                <div class="category-content">
-                    <span class="cat-number">02</span>
-                    <h3 class="cat-title">FUDGES</h3>
-                    <p class="cat-desc">Rich, indulgent fudge cakes for serious chocolate lovers.</p>
-                    <span class="cat-link">EXPLORE CATEGORY →</span>
-                </div>
-            </a>
+                <div class="compact-products-grid grid-3-cols">
+                    <!-- Vanilla Butter Cream Cake -->
+                    <div class="compact-card" data-product="Vanilla Butter Cream Cake">
+                        <div class="compact-card-media">
+                            <img src="images/vanilla_cream.jpg" alt="Vanilla Butter Cream Cake" loading="lazy"
+                                class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">VANILLA BUTTER CREAM</h4>
+                            <p class="compact-card-desc">Soft vanilla cake finished with smooth buttercream.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Vanilla%20Butter%20Cream%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
 
-            <!-- Category 3 -->
-            <a href="#dry-cakes" class="category-card">
-                <div class="category-bg category-bg-3"></div>
-                <div class="category-content">
-                    <span class="cat-number">03</span>
-                    <h3 class="cat-title">DRY CAKES</h3>
-                    <p class="cat-desc">Simple, delicious cakes perfect for everyday enjoyment and sharing.</p>
-                    <span class="cat-link">EXPLORE CATEGORY →</span>
-                </div>
-            </a>
-        </div>
-    </section>
+                    <!-- Chocolate Butter Cream Cake -->
+                    <div class="compact-card" data-product="Chocolate Butter Cream Cake">
+                        <div class="compact-card-media">
+                            <img src="images/choc_cream.jpg" alt="Chocolate Butter Cream Cake" loading="lazy"
+                                class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">CHOCOLATE BUTTER CREAM</h4>
+                            <p class="compact-card-desc">Rich chocolate layers finished with creamy buttercream.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Chocolate%20Butter%20Cream%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
 
-    <!-- 4. BIRTHDAY CAKES SECTION -->
-    <section class="cake-showcase-section birthday-theme" id="birthday-cakes">
-        <div class="section-header sticky-header">
-            <span class="section-tag">CATEGORY 01</span>
-            <h2 class="section-title">BIRTHDAY CAKES</h2>
-            <p class="section-subtitle">Make the celebration sweeter.</p>
-        </div>
-
-        <div class="products-list">
-            <!-- Product 1 -->
-            <div class="product-cinematic-card" data-product="Vanilla Butter Cream Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-gold"></div>
-                    <img src="images/vanilla_cream.jpg" alt="Vanilla Butter Cream Cake" class="product-photo">
-                </div>
-                <div class="product-info">
-                    <span class="prod-num">01 / 03</span>
-                    <h3 class="prod-name">VANILLA BUTTER CREAM CAKE</h3>
-                    <p class="prod-desc">Soft vanilla cake finished with smooth buttercream.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Vanilla%20Butter%20Cream%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS CAKE</span>
-                    </a>
+                    <!-- Coffee Butter Cream Cake -->
+                    <div class="compact-card" data-product="Coffee Butter Cream Cake">
+                        <div class="compact-card-media">
+                            <img src="images/coffee_cream.jpg" alt="Coffee Butter Cream Cake" loading="lazy"
+                                class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">COFFEE BUTTER CREAM</h4>
+                            <p class="compact-card-desc">Delicate coffee-flavored cake with smooth buttercream.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Coffee%20Butter%20Cream%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Product 2 -->
-            <div class="product-cinematic-card" data-product="Chocolate Butter Cream Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-choc"></div>
-                    <img src="images/choc_cream.jpg" alt="Chocolate Butter Cream Cake" class="product-photo">
+            <!-- CATEGORY 02 — FUDGES -->
+            <div class="compact-category-block" id="category-fudges">
+                <div class="category-block-header">
+                    <span class="category-num">CATEGORY 02</span>
+                    <h3 class="category-title">FUDGES</h3>
+                    <div class="category-divider"></div>
                 </div>
-                <div class="product-info">
-                    <span class="prod-num">02 / 03</span>
-                    <h3 class="prod-name">CHOCOLATE BUTTER CREAM CAKE</h3>
-                    <p class="prod-desc">Rich chocolate layers finished with creamy buttercream.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Chocolate%20Butter%20Cream%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS CAKE</span>
-                    </a>
+
+                <div class="compact-products-grid grid-2-cols">
+                    <!-- Chocolate Fudge Cake -->
+                    <div class="compact-card" data-product="Chocolate Fudge Cake">
+                        <div class="compact-card-media">
+                            <img src="images/choc_fudge.jpg" alt="Chocolate Fudge Cake" loading="lazy"
+                                class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">CHOCOLATE FUDGE</h4>
+                            <p class="compact-card-desc">Deep chocolate flavor with a rich, indulgent finish.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Chocolate%20Fudge%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Custard Fudge Cake -->
+                    <div class="compact-card" data-product="Custard Fudge Cake">
+                        <div class="compact-card-media">
+                            <img src="images/custard_fudge.jpg" alt="Custard Fudge Cake" loading="lazy"
+                                class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">CUSTARD FUDGE</h4>
+                            <p class="compact-card-desc">A rich combination of fudge and smooth custard.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Custard%20Fudge%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Product 3 -->
-            <div class="product-cinematic-card" data-product="Coffee Butter Cream Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-coffee"></div>
-                    <img src="images/coffee_cream.jpg" alt="Coffee Butter Cream Cake" class="product-photo">
+            <!-- CATEGORY 03 — DRY CAKES -->
+            <div class="compact-category-block" id="category-dry-cakes">
+                <div class="category-block-header">
+                    <span class="category-num">CATEGORY 03</span>
+                    <h3 class="category-title">DRY CAKES</h3>
+                    <div class="category-divider"></div>
                 </div>
-                <div class="product-info">
-                    <span class="prod-num">03 / 03</span>
-                    <h3 class="prod-name">COFFEE BUTTER CREAM CAKE</h3>
-                    <p class="prod-desc">A delicate coffee-flavored cake finished with smooth buttercream.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Coffee%20Butter%20Cream%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS CAKE</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 5. FUDGE SECTION -->
-    <section class="cake-showcase-section fudge-theme" id="fudge-cakes">
-        <div class="section-header">
-            <span class="section-tag">CATEGORY 02</span>
-            <h2 class="section-title">FUDGES</h2>
-            <p class="section-subtitle">Rich. Deep. Indulgent.</p>
-        </div>
+                <div class="compact-products-grid grid-3-cols">
+                    <!-- Brownie -->
+                    <div class="compact-card" data-product="Brownie">
+                        <div class="compact-card-media">
+                            <img src="images/brownie.jpg" alt="Brownie" loading="lazy" class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">BROWNIE</h4>
+                            <p class="compact-card-desc">Rich, chocolatey and deeply satisfying.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Brownie.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
 
-        <div class="products-list">
-            <!-- Product 1 -->
-            <div class="product-cinematic-card" data-product="Chocolate Fudge Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-deep-fudge"></div>
-                    <img src="images/choc_fudge.jpg" alt="Chocolate Fudge Cake" class="product-photo">
-                </div>
-                <div class="product-info">
-                    <span class="prod-num">01 / 02</span>
-                    <h3 class="prod-name">CHOCOLATE FUDGE CAKE</h3>
-                    <p class="prod-desc">Deep chocolate flavor with a rich, indulgent finish.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Chocolate%20Fudge%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS CAKE</span>
-                    </a>
-                </div>
-            </div>
+                    <!-- Orange Cake -->
+                    <div class="compact-card" data-product="Orange Cake">
+                        <div class="compact-card-media">
+                            <img src="images/orange_cake.jpg" alt="Orange Cake" loading="lazy" class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">ORANGE CAKE</h4>
+                            <p class="compact-card-desc">Soft cake with a fresh, vibrant orange flavor.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Orange%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
 
-            <!-- Product 2 -->
-            <div class="product-cinematic-card" data-product="Custard Fudge Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-custard"></div>
-                    <img src="images/custard_fudge.jpg" alt="Custard Fudge Cake" class="product-photo">
+                    <!-- Strawberry Cake -->
+                    <div class="compact-card" data-product="Strawberry Cake">
+                        <div class="compact-card-media">
+                            <img src="images/strawberry_cake.jpg" alt="Strawberry Cake" loading="lazy"
+                                class="compact-card-img">
+                        </div>
+                        <div class="compact-card-content">
+                            <h4 class="compact-card-title">STRAWBERRY CAKE</h4>
+                            <p class="compact-card-desc">Soft cake with a fresh, fruity strawberry character.</p>
+                            <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Strawberry%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
+                                target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-compact-order">
+                                <span>ORDER ON WHATSAPP</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-info">
-                    <span class="prod-num">02 / 02</span>
-                    <h3 class="prod-name">CUSTARD FUDGE CAKE</h3>
-                    <p class="prod-desc">A rich combination of fudge and smooth custard.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Custard%20Fudge%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS CAKE</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. DRY CAKES SECTION -->
-    <section class="cake-showcase-section dry-theme" id="dry-cakes">
-        <div class="section-header">
-            <span class="section-tag">CATEGORY 03</span>
-            <h2 class="section-title">DRY CAKES</h2>
-            <p class="section-subtitle">Simple. Delicious. Made to share.</p>
-        </div>
-
-        <div class="products-list">
-            <!-- Product 1 -->
-            <div class="product-cinematic-card" data-product="Brownie">
-                <div class="product-visual">
-                    <div class="visual-glow glow-brownie"></div>
-                    <img src="images/brownie.jpg" alt="Brownie" class="product-photo">
-                </div>
-                <div class="product-info">
-                    <span class="prod-num">01 / 03</span>
-                    <h3 class="prod-name">BROWNIE</h3>
-                    <p class="prod-desc">Rich, chocolatey and satisfying.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Brownie.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-cinematic-card" data-product="Orange Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-orange"></div>
-                    <img src="images/orange_cake.jpg" alt="Orange Cake" class="product-photo">
-                </div>
-                <div class="product-info">
-                    <span class="prod-num">02 / 03</span>
-                    <h3 class="prod-name">ORANGE CAKE</h3>
-                    <p class="prod-desc">Soft cake with a fresh orange flavor.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Orange%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-cinematic-card" data-product="Strawberry Cake">
-                <div class="product-visual">
-                    <div class="visual-glow glow-strawberry"></div>
-                    <img src="images/strawberry_cake.jpg" alt="Strawberry Cake" class="product-photo">
-                </div>
-                <div class="product-info">
-                    <span class="prod-num">03 / 03</span>
-                    <h3 class="prod-name">STRAWBERRY CAKE</h3>
-                    <p class="prod-desc">A soft strawberry-inspired cake with a fresh, fruity character.</p>
-                    <a href="https://wa.me/251942362738?text=Hi!%20I%27m%20interested%20in%20ordering%20the%20Strawberry%20Cake.%20Could%20you%20please%20give%20me%20the%20available%20sizes%20and%20price%3F"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-product-cta">
-                        <span>ORDER THIS</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FULL SCREEN PRODUCT MOMENT -->
-    <section class="fullscreen-moment-section">
-        <div class="moment-overlay"></div>
-        <div class="moment-content">
-            <h2 class="moment-title">WHICH ONE IS YOURS?</h2>
-            <p class="moment-subtitle">Choose your favorite and order directly through WhatsApp.</p>
-            <div class="moment-cta-group">
-                <a href="https://wa.me/251942362738?text=Hi!%20I%20found%20your%20cake%20website%20and%20I%27d%20like%20to%20order%20a%20cake.%20Can%20you%20help%20me%20with%20the%20available%20options%3F"
-                    target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
-                    <span>ORDER ON WHATSAPP</span>
-                </a>
-                <a href="tel:+251942362738" class="btn btn-secondary btn-large">
-                    <span>CALL TO ORDER</span>
-                </a>
             </div>
         </div>
     </section>

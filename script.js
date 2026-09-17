@@ -3,15 +3,37 @@
    ------------------------------------------------------------- */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Particle Canvas Background Effect
+    // 1. Theme Controller (Light Mode Default + Dark Mode Toggle)
+    initThemeController();
+
+    // 2. Particle Canvas Background Effect
     initParticleCanvas();
 
-    // 2. Navigation Scroll & Mobile Toggle
+    // 3. Navigation Scroll & Mobile Toggle
     initNavbar();
 
-    // 3. Scroll Reveal Animations (IntersectionObserver)
+    // 4. Scroll Reveal Animations (IntersectionObserver)
     initScrollReveals();
 });
+
+// Theme Controller: Light Mode (Default) & Dark Mode with LocalStorage persistence
+function initThemeController() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme') || 'light';
+
+    // Set initial theme attribute on <html> element
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+}
 
 // Particle Canvas Implementation
 function initParticleCanvas() {
@@ -28,21 +50,24 @@ function initParticleCanvas() {
     });
 
     const particles = [];
-    const particleCount = 45;
+    const particleCount = 40;
 
     for (let i = 0; i < particleCount; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
             radius: Math.random() * 2 + 0.5,
-            speedY: Math.random() * 0.4 + 0.1,
+            speedY: Math.random() * 0.35 + 0.1,
             speedX: (Math.random() - 0.5) * 0.2,
-            opacity: Math.random() * 0.5 + 0.2,
+            opacity: Math.random() * 0.4 + 0.15,
         });
     }
 
     function animate() {
         ctx.clearRect(0, 0, width, height);
+
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const particleColor = currentTheme === 'light' ? '184, 91, 108' : '212, 175, 55';
 
         particles.forEach((p) => {
             p.y -= p.speedY;
@@ -55,7 +80,7 @@ function initParticleCanvas() {
 
             ctx.beginPath();
             ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`;
+            ctx.fillStyle = `rgba(${particleColor}, ${p.opacity})`;
             ctx.fill();
         });
 
@@ -102,13 +127,13 @@ const BUSINESS_CONFIG = {
 // Intersection Observer for Smooth Scroll Reveal Animations
 function initScrollReveals() {
     const revealElements = document.querySelectorAll(
-        '.reveal-line, .category-card, .product-cinematic-card, .occasion-card, .step-card, .moment-content, .order-form-container'
+        '.reveal-line, .compact-category-block, .compact-card, .occasion-card, .step-card, .order-form-container'
     );
 
     revealElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(40px)';
-        el.style.transition = 'all 0.9s cubic-bezier(0.16, 1, 0.3, 1)';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
     });
 
     const observer = new IntersectionObserver((entries) => {
